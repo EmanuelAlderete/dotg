@@ -5,29 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ponto G</title>
+    <title>DOT G</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-
-    <style>
-    body {
-      height: 100vh;
-    }
-      footer {
-        bottom: 0 !important;
-        position: relative;
-        width: 100%;
-        text-align: center;
-        background: #555555;
-      }
-
-      footer span {
-        color: white !important;
-      }
-
-
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -36,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="jumbotron">
-                    <h1 class="display-4">Encontre o Ponto G</h1>
+                    <h1 class="display-4">DOT G</h1>
                     <p class="lead">Uma calculadora pronta para lhe ajudar.</p>
                     <hr class="my-4">
                 </div>
@@ -62,11 +43,12 @@
                     <div class="tab-pane fade show active" id="media" role="tabpanel" aria-labelledby="media-tab">
                         <div class="card text-center">
                             <div class="card-header">
-                                Informe os valores
+                                <p>O ponto médio é o ponto de equilíbrio de um segmento de reta. Podemos definir o ponto médio como o ponto que divide o segmento de reta exatamente no meio tendo dois novos segmentos iguais.</p>
+                                    Foneça as coordenadas dos pontos para encontrar o PONTO MÉDIO.
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 block-point">
                                         <h5 class="card-title">Ponto A</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -79,7 +61,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 block-point">
                                         <h5 class="card-title">Ponto B</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -102,12 +84,13 @@
                     </div>
                     <div class="tab-pane fade" id="mediana" role="tabpanel" aria-labelledby="mediana-tab">
                         <div class="card text-center">
-                            <div class="card-header">
-                                Informe os valores
-                            </div>
+                          <div class="card-header">
+                              <p>Mediana de um triângulo é o segmento de reta que liga um vértice deste triângulo ao ponto médio do lado oposto a este vértice. As três medianas de um triângulo são concorrentes e se encontram no centro de massa, ou baricentro do triângulo.</p>
+                              O ponto A representa o vértice oposto ao ponto médio.
+                          </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-point card-dark">
                                         <h5 class="card-title">Ponto A</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -120,7 +103,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-point">
                                         <h5 class="card-title">Ponto B</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -133,7 +116,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-point">
                                         <h5 class="card-title">Ponto C</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -156,12 +139,13 @@
                     </div>
                     <div class="tab-pane fade" id="baricentro" role="tabpanel" aria-labelledby="baricentro-tab">
                         <div class="card text-center">
-                            <div class="card-header">
-                                Informe os valores
-                            </div>
+                          <div class="card-header">
+                              <p>O baricentro é determinado pelo encontro das medianas de um triângulo.</p>
+                              Forneça as coordenadas de todos os vértices do triângulo.
+                          </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-highlight block-point">
                                         <h5 class="card-title">Ponto A</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -174,7 +158,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-point">
                                         <h5 class="card-title">Ponto B</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -187,7 +171,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-4">
+                                    <div class="col-sm-12 col-md-4 block-point">
                                         <h5 class="card-title">Ponto C</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -210,12 +194,13 @@
                     </div>
                     <div class="tab-pane fade" id="distancia" role="tabpanel" aria-labelledby="distancia-tab">
                         <div class="card text-center">
-                            <div class="card-header">
-                                Informe os valores
-                            </div>
+                          <div class="card-header">
+                              <p>Na linguagem corrente, distância é a medida da separação de dois pontos. A distância entre dois pontos é medida pelo comprimento do segmento de reta que os liga.</p>
+                              Forneça as coordenadas dos pontos.
+                          </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 block-point">
                                         <h5 class="card-title">Ponto A</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -228,7 +213,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 block-point">
                                         <h5 class="card-title">Ponto B</h5>
                                         <div class="row">
                                             <div class="col-6">
@@ -258,8 +243,6 @@
         <span class="">Emanuel Alderete & João Pedro Rodrigues | Com <img src="heart.svg" alt=""> para MAX</span>
       </div>
     </footer>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

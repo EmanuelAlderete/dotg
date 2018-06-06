@@ -1,0 +1,17 @@
+.block-point {
+  padding: 15px;
+}
+
+.card-dark {
+    color: white;
+    background-color: #21212b;
+}
+
+.card-body {
+  padding-top: 0.3rem;
+}
+
+.card-header p {
+  text-decoration: none;
+  font-weight: lighter;
+}
