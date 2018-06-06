@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ponto G</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+    body {
+      height: 100vh;
+    }
+      footer {
+        bottom: 0 !important;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        background: #555555;
+      }
+
+      footer span {
+        color: white !important;
+      }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Encontre o Ponto G</h1>
+                    <p class="lead">Uma calculadora pronta para lhe ajudar.</p>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="media-tab" data-toggle="tab" href="#media" role="tab" aria-controls="media" aria-selected="true">Ponto Médio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mediana-tab" data-toggle="tab" href="#mediana" role="tab" aria-controls="mediana" aria-selected="false">Mediana</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="baricentro-tab" data-toggle="tab" href="#baricentro" role="tab" aria-controls="baricentro" aria-selected="false">Baricentro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="distancia-tab" data-toggle="tab" href="#distancia" role="tab" aria-controls="distancia" aria-selected="false">Distância</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="media" role="tabpanel" aria-labelledby="media-tab">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Informe os valores
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <h5 class="card-title">Ponto A</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="ax_media" class="form-control">
+                                            </div>
+                                            <div class="col-6 ">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="ay_media" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <h5 class="card-title">Ponto B</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="bx_media" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="by_media" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class="btn btn-primary" onclick="media();">Calcular</button>
+                                <p id="resultado">Resultado: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="mediana" role="tabpanel" aria-labelledby="mediana-tab">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Informe os valores
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto A</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="ax_mediana" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="ay_mediana" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto B</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="bx_mediana" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="by_mediana" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto C</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="cx_mediana" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="cy_mediana" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class="btn btn-primary" onclick="mediana()">Calcular</button>
+                                <p id="resultado-mediana">Resultado: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="baricentro" role="tabpanel" aria-labelledby="baricentro-tab">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Informe os valores
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto A</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="ax_bari" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="ay_bari" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto B</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="bx_bari" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="by_bari" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <h5 class="card-title">Ponto C</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="cx_bari" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="cy_bari" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class="btn btn-primary" onclick="baricentro();">Calcular</button>
+                                <p id="resultado-bari">Resultado: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="distancia" role="tabpanel" aria-labelledby="distancia-tab">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Informe os valores
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <h5 class="card-title">Ponto A</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="ax_dist" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="ay_dist" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <h5 class="card-title">Ponto B</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de X</p>
+                                                <input type="text" id="bx_dist" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="card-text">Valor de Y</p>
+                                                <input type="text" id="by_dist" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button class="btn btn-primary" onclick="distancia();">Calcular</button>
+                                <p id="resultado-dist">Resultado: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="container">
+        <span class="">Emanuel Alderete & João Pedro Rodrigues | Com <img src="heart.svg" alt=""> para MAX</span>
+      </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="calc.js"></script>
+</body>
+
+</html>
